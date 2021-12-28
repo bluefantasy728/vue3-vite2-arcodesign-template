@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0404f4;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="The-Icons" transform="translate(-4 -4)">
+    <path id="Combined-Shape" class="cls-1" d="M11.171,13a3,3,0,0,0,5.659,0H22V6H6v7ZM24,5V23a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H23A1,1,0,0,1,24,5ZM6,22H22V15H18a5,5,0,0,1-8,0H6ZM7,8A1,1,0,0,1,8,7H20a1,1,0,0,1,0,2H8A1,1,0,0,1,7,8Zm0,3a1,1,0,0,1,1-1H20a1,1,0,0,1,0,2H8A1,1,0,0,1,7,11Z"/>
+  </g>
+</svg>

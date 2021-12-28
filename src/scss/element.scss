@@ -1,0 +1,272 @@
+// $--color-primary: #0404f4;
+// $--color-danger: #8b8baf;
+// $--color-warning: #343434;
+// $--color-info: #8b8baf;
+@use "sass:math";
+@use "sass:map";
+$--colors: () !default;
+$--colors: map.deep-merge(
+  (
+    'primary': (
+      'base': #0404f4,
+    ),
+    'warning': (
+      'base': #343434,
+    ),
+    'danger': (
+      'base': #8b8baf,
+    ),
+    'info': (
+      'base': #8b8baf,
+    ),
+  ),
+  $--colors
+);
+
+/* 改变主题色变量 */
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-plus/theme-chalk/fonts';
+@import 'element-plus/packages/theme-chalk/src/index';
+
+.el-input {
+  .el-input__inner {
+    border: none;
+  }
+}
+.el-textarea__inner {
+  border: none;
+}
+.el-select {
+}
+.el-select .el-input .el-select__caret {
+  color: #8b8baf;
+  font-weight: bolder;
+  display: inline-block;
+  font-size: 20px;
+  &::before {
+    content: '\e6e1';
+    transform: scale(1.1, 0.9);
+    display: block;
+  }
+}
+
+.el-table {
+  margin: 30px 0;
+  background: transparent;
+  table {
+    border-spacing: 0 6px;
+  }
+  thead tr,
+  thead tr th {
+    background: transparent;
+  }
+  thead .cell {
+    color: #8b8baf;
+  }
+  .el-table__body tr.remind td {
+    border-bottom: 2px solid #fcec0c;
+  }
+  .el-table__body tr > td:last-child .cell {
+    padding-right: 20px;
+  }
+  .el-table__body tr:hover > td {
+    background: #fff;
+  }
+  .el-table__body tr > td {
+    border: 0;
+    background: #fff;
+    padding: 9px 0;
+    font-size: 12px;
+  }
+  .el-table__body tr > td:first-child {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+  .el-table__body tr > td:last-child {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  .el-table__body tr > td:nth-child(2n-1) {
+    color: #343434;
+  }
+  .el-table__body tr > td:nth-child(2n) {
+    color: #8b8baf;
+  }
+  th.is-leaf,
+  td {
+    border: 0;
+  }
+  &::before {
+    height: 0;
+  }
+}
+.el-table__empty-block {
+  background: #fff !important;
+  border-radius: 3px;
+  min-height: 80px;
+}
+
+.el-button:not(.el-button--small) {
+  padding-left: 55px;
+  padding-right: 55px;
+}
+.btn-order {
+  box-sizing: border-box;
+  padding: 10px 16px !important;
+  min-width: 100px;
+  text-align: center;
+  border-radius: 1px;
+  border: none;
+  &.btn-black {
+    min-width: 140px;
+    text-align: center;
+    background: #343434;
+    &.service {
+      width: 116px;
+      min-width: unset;
+    }
+  }
+}
+
+.el-radio {
+  color: #343434 !important;
+  font-size: 14px;
+}
+.el-radio__inner {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #707070;
+}
+.el-radio__input.is-checked + .el-radio__label {
+  color: #8b8baf !important;
+}
+.el-radio__input.is-checked .el-radio__inner {
+  border-color: #8b8baf;
+  background: #fff;
+  &:after {
+    width: 12px;
+    height: 12px;
+    background: #8b8baf;
+  }
+}
+
+.el-textarea__inner,
+.el-date-editor,
+.el-input {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(185, 185, 227, 1);
+  border-radius: 3px;
+  font-size: 12px;
+  color: #8b8baf;
+  &::-webkit-input-placeholder {
+    color: #8b8baf;
+  }
+}
+
+// 弹窗
+.el-message-box {
+  width: 635px;
+  border: none;
+  border-top: 5px solid #3055e8;
+  border-radius: 4px;
+  .el-message-box__content {
+    min-height: 100px !important;
+  }
+  .el-message-box__btns {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    text-align: left !important;
+    border-top: 1px solid #bdc7db;
+    .el-button {
+      width: 140px;
+    }
+    .el-button--primary {
+      position: relative;
+      background: #0404f4 !important;
+      left: -145px !important;
+    }
+    .el-button--default {
+      position: relative;
+      left: 160px;
+      background: #8b8baf;
+      color: #fff;
+    }
+  }
+}
+.el-message-box__message {
+  margin: 30px !important;
+}
+.el-pagination button:disabled,
+.el-pagination .btn-prev,
+.el-pagination .btn-next,
+.el-pager li {
+  background: transparent !important;
+}
+
+.el-container {
+  height: 100vh;
+}
+
+// message.error的提示颜色
+.el-message--error {
+  background-color: #fef0f0;
+  border-color: #fde2e2;
+  .el-icon-error,
+  .el-message__content {
+    color: #f56c6c;
+  }
+}
+
+.el-dialog {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  .el-dialog__header {
+    border-top: 6px solid #0000cc;
+    border-radius: 6px;
+  }
+  .el-dialog__body {
+    padding: 0 40px 20px;
+  }
+  .el-dialog__headerbtn {
+    top: 20px;
+    right: 15px;
+    .el-dialog__close {
+      color: #4a4a4a;
+      font-weight: bolder;
+    }
+  }
+  .sub-title {
+    color: #9b9b9b;
+    font-size: 12px;
+  }
+  .dialog-content {
+    margin: 30px 0;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 60px;
+  }
+  .title {
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-bottom: 6px;
+  }
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.el-popper.price-name-input {
+  width: auto !important;
+}
+.edit-item-popper {
+  max-width: 50vw !important;
+  .audit-remark {
+    width: 100%;
+  }
+}

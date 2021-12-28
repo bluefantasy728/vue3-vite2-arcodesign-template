@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="43" height="43" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="nav_payment" clip-path="url(#clip-path)">
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="43" height="43" fill="#fff" opacity="0"/>
+    <g id="Group_20" data-name="Group 20" transform="translate(-0.687 -213.683)">
+      <rect id="Rectangle_5" data-name="Rectangle 5" width="20.625" height="12.343" transform="translate(11.688 230.688)" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <path id="Path_23" data-name="Path 23" d="M15.125,243.029v-2.062l-1.375-1.375H11.687" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <path id="Path_24" data-name="Path 24" d="M15.125,230.683v2.063l-1.375,1.375H11.687" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <path id="Path_25" data-name="Path 25" d="M28.885,243.03v-2.063c.537-.536.838-.837,1.375-1.375h2.063" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <path id="Path_26" data-name="Path 26" d="M28.885,230.683v2.063c.537.536.838.837,1.375,1.375h2.063" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <path id="Path_27" data-name="Path 27" d="M19.937,232.746v.688l2.048,2.048,2.063-2.062v-.673" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <line id="Line_2" data-name="Line 2" y2="5.514" transform="translate(21.985 235.481)" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <line id="Line_3" data-name="Line 3" x2="5.5" transform="translate(19.25 236.871)" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+      <line id="Line_4" data-name="Line 4" x2="5.5" transform="translate(19.25 238.933)" fill="none" stroke="#0404f4" stroke-miterlimit="10" stroke-width="1.7"/>
+    </g>
+  </g>
+</svg>

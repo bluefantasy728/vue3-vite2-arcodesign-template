@@ -1,0 +1,27 @@
+{
+  "name": "vite-vue",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --mode dev",
+    "build": "vite build --mode prod",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "dayjs": "^1.10.7",
+    "element-plus": "^1.1.0-beta.10",
+    "mitt": "^3.0.0",
+    "normalize.css": "^8.0.1",
+    "store": "^2.0.12",
+    "vue": "^3.2.23",
+    "vue-router": "^4.0.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.6.1",
+    "@vue/compiler-sfc": "^3.2.6",
+    "sass": "1.40.0",
+    "unplugin-auto-import": "^0.5.5",
+    "unplugin-vue-components": "^0.17.11",
+    "vite": "^2.7.0"
+  }
+}

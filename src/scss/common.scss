@@ -1,0 +1,40 @@
+.page {
+  min-height: 100vh;
+}
+.blue-line {
+  position: relative;
+  padding-bottom: 16px;
+  color: #0404f4;
+  font-weight: lighter;
+  font-size: 24px;
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 48px;
+    height: 5px;
+    background: #0404f4;
+    left: 0;
+    bottom: 0;
+  }
+}
+.h50 {
+  height: 50px !important;
+}
+.h42 {
+  height: 60px !important;
+}
+.tal {
+  text-align: left !important;
+}
+.tac {
+  text-align: center !important;
+}
+.tar {
+  text-align: right !important;
+}
+
+// .cell {
+//   border: 1px solid black;
+//   border-top: 0;
+// }
