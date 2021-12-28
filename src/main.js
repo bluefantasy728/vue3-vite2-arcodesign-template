@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
-import ElementPlus from 'element-plus';
-import 'element-plus/dist/index.css';
+import ArcoVue from '@arco-design/web-vue';
 import App from './App.vue';
 import router from './router';
 // import store from './store';
@@ -11,7 +10,7 @@ import axios from './request';
 import mixin from './mixin';
 import mitt from 'mitt';
 import './scss/global.scss';
-import './scss/element.scss';
+import '@arco-design/web-vue/dist/arco.css';
 
 const app = createApp(App);
 mixin(app);
@@ -34,5 +33,7 @@ app.config.globalProperties = {
 //   const component = components[c]?.default;
 //   app.component(component.name, component);
 // });
-
-app.use(ElementPlus).use(router).use(plugin).mount('#app');
+app.use(ArcoVue, {
+  componentPrefix: 'a',
+});
+app.use(router).use(plugin).mount('#app');

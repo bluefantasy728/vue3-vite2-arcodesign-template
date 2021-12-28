@@ -1,38 +1,44 @@
 <style lang="scss" scoped>
-.el-header {
+.arco-layout {
+  height: 100%;
+  &.container {
+    height: 100vh;
+  }
+}
+.arco-layout-header {
   color: #333;
   text-align: center;
   background: #eee;
 }
-.el-aside {
+.arco-layout-sider {
   background-color: #d3dce6;
   color: #333;
   text-align: center;
   overflow: hidden;
+  :deep(.arco-layout-sider-children) {
+    overflow: hidden;
+  }
 }
-:deep(.el-container) {
-  height: 100%;
-}
-.el-main {
+.main {
   padding: 0;
   overflow-y: auto;
 }
 </style>
 
 <template>
-  <el-container>
-    <el-aside width="60px">
+  <a-layout class="container">
+    <a-layout-sider style="width: 60px;">
       <LayoutAside />
-    </el-aside>
-    <el-container>
-      <el-header height="58px">
+    </a-layout-sider>
+    <a-layout>
+      <a-layout-header style="height: 58px;">
         <LayoutHeader />
-      </el-header>
-      <el-main>
+      </a-layout-header>
+      <a-layout-content class="main">
         <slot></slot>
-      </el-main>
-    </el-container>
-  </el-container>
+      </a-layout-content>
+    </a-layout>
+  </a-layout>
 </template>
 
 <script>

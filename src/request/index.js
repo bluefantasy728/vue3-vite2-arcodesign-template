@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ElLoading, ElMessage } from 'element-plus';
+// import { ElLoading, ElMessage } from 'element-plus';
 import store from 'store';
 import router from '../router';
 import config from '../config';
@@ -35,10 +35,10 @@ http.interceptors.request.use(
     }
 
     timeout = setTimeout(() => {
-      loading = ElLoading.service({
-        fullscreen: true,
-        text: '请求中...',
-      });
+      // loading = ElLoading.service({
+      //   fullscreen: true,
+      //   text: '请求中...',
+      // });
     }, delay);
 
     delete config.headers.isRoot;
@@ -71,10 +71,10 @@ http.interceptors.response.use(
       return ret;
     }
     if (response.data.status != 200) {
-      ElMessage({
-        message: ret.msg,
-        type: 'error',
-      });
+      // ElMessage({
+      //   message: ret.msg,
+      //   type: 'error',
+      // });
       try {
         ret.fail = true;
       } catch (error) {}
@@ -99,10 +99,10 @@ http.interceptors.response.use(
     }
 
     if (err.message.includes('timeout')) {
-      ElMessage({
-        message: '请求超时, 请检查网络',
-        type: 'error',
-      });
+      // ElMessage({
+      //   message: '请求超时, 请检查网络',
+      //   type: 'error',
+      // });
       return {
         fail: true,
       };

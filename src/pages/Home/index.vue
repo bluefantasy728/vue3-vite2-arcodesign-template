@@ -10,6 +10,9 @@
     height: 250px;
     background: url(@/assets/img/illustration.png);
   }
+  .test-btn {
+    width: 400px;
+  }
 }
 </style>
 <template>
@@ -17,6 +20,7 @@
     <h3>hello vue3</h3>
     <img src="@/assets/img/illustration.png" />
     <div class="bg-img"></div>
+    <a-button class="test-btn" type="primary" @click="test">测试按钮</a-button>
   </div>
 </template>
 
@@ -32,6 +36,9 @@ const router = useRouter();
 const state = reactive({});
 
 /***** 方法定义 *****/
+function test() {
+  console.log('testttt');
+}
 
 /***** 声明周期和watch *****/
 onMounted(async () => {});

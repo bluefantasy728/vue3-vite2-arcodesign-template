@@ -130,7 +130,7 @@
       <div class="login-box posa">
         <h5 class="login-title">用户登录</h5>
         <p class="mb5" style="color:#4737FF">手机号码</p>
-        <el-input
+        <a-input
           v-model="postData.loginName"
           type="text"
           autofocus
@@ -138,14 +138,14 @@
           class="email-input mb20"
         />
         <p class="mb5" style="color:#4737FF">登录密码</p>
-        <el-input
+        <a-input
           v-model="postData.password"
           type="password"
           placeholder="密码"
           class="password-input mb100"
           @keyup.enter.native="loginFn"
         />
-        <el-button class="mb20" type="primary" style="width:100%" @click="loginFn">登录</el-button>
+        <a-button class="mb20" type="primary" style="width:100%" @click="loginFn">登录</a-button>
         <p class="pointer" style="text-align:right;color:#0404f4" @click="$refs.dialog.open()">忘记密码</p>
       </div>
     </div>
