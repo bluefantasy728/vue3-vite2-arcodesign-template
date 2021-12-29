@@ -11,6 +11,7 @@
     "dayjs": "^1.10.7",
     "mitt": "^3.0.0",
     "normalize.css": "^8.0.1",
+    "pinia": "^2.0.9",
     "store": "^2.0.12",
     "vue": "^3.2.23",
     "vue-router": "^4.0.11"
@@ -19,6 +20,7 @@
     "@arco-design/web-vue": "^2.12.2",
     "@vitejs/plugin-vue": "^1.6.1",
     "@vue/compiler-sfc": "^3.2.6",
+    "pinia-plugin-persistedstate": "^1.0.3",
     "sass": "1.40.0",
     "unplugin-auto-import": "^0.5.5",
     "unplugin-vue-components": "^0.17.11",

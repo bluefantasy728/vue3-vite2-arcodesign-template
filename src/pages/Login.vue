@@ -154,15 +154,18 @@
 <script setup>
 // import { getCurrentInstance, reactive, toRefs } from 'vue';
 // import { useRouter, useRoute } from 'vue-router';
+import { useUserStore } from '@/store/user';
 const { proxy } = getCurrentInstance();
 const router = useRouter();
+const user = useUserStore();
 
 const postData = reactive({
   loginName: '',
   password: '',
 });
 
-function loginFn() {
+async function loginFn() {
+  await user.setUserInfo(postData);
   router.push({
     name: 'home',
   });

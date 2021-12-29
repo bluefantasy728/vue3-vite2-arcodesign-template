@@ -18,6 +18,8 @@
 <template>
   <div class="page-dashboard">
     <h3>hello vue3</h3>
+    <a-input v-model="userInfo.loginName"></a-input>
+    <a-input v-model="userInfo.password"></a-input>
     <img src="@/assets/img/illustration.png" />
     <div class="bg-img"></div>
     <a-button class="test-btn" type="primary" @click="test">测试按钮</a-button>
@@ -28,6 +30,9 @@
 /***** 相关引入和定义 *****/
 // import { reactive, toRefs, onMounted, computed, getCurrentInstance } from 'vue';
 // import { useRouter, useRoute } from 'vue-router';
+import { useUserStore } from '@/store/user';
+const user = useUserStore();
+const { userInfo } = user;
 
 const { proxy } = getCurrentInstance();
 const router = useRouter();

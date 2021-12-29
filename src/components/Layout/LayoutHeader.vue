@@ -1,6 +1,7 @@
 <style lang="scss" scoped>
 .layout-header {
   height: 100%;
+  padding: 0 20px;
   .el-icon-search {
     color: #4737ff;
     font-size: 18px;

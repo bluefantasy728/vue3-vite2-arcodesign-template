@@ -116,7 +116,6 @@ const menuList = ref([
 function getSrc(name) {
   const path = `../../assets/icons/${name}.svg`;
   const modules = import.meta.globEager('../../assets/icons/*.svg');
-  console.log(modules[path]);
   return modules[path].default;
 }
 </script>

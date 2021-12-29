@@ -8,6 +8,8 @@ specifiers:
   dayjs: ^1.10.7
   mitt: ^3.0.0
   normalize.css: ^8.0.1
+  pinia: ^2.0.9
+  pinia-plugin-persistedstate: ^1.0.3
   sass: 1.40.0
   store: ^2.0.12
   unplugin-auto-import: ^0.5.5
@@ -21,6 +23,7 @@ dependencies:
   dayjs: registry.npmmirror.com/dayjs/1.10.7
   mitt: registry.nlark.com/mitt/3.0.0
   normalize.css: registry.npmmirror.com/normalize.css/8.0.1
+  pinia: registry.npmmirror.com/pinia/2.0.9_vue@3.2.26
   store: registry.nlark.com/store/2.0.12
   vue: registry.npmmirror.com/vue/3.2.26
   vue-router: registry.npmmirror.com/vue-router/4.0.12_vue@3.2.26
@@ -29,6 +32,7 @@ devDependencies:
   '@arco-design/web-vue': registry.npmmirror.com/@arco-design/web-vue/2.12.2_vue@3.2.26
   '@vitejs/plugin-vue': registry.npmmirror.com/@vitejs/plugin-vue/1.10.2_vite@2.7.7
   '@vue/compiler-sfc': registry.npmmirror.com/@vue/compiler-sfc/3.2.26
+  pinia-plugin-persistedstate: registry.npmmirror.com/pinia-plugin-persistedstate/1.0.3_pinia@2.0.9
   sass: registry.npmmirror.com/sass/1.40.0
   unplugin-auto-import: registry.npmmirror.com/unplugin-auto-import/0.5.5_vite@2.7.7
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.17.11_vite@2.7.7+vue@3.2.26
@@ -326,6 +330,12 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: registry.nlark.com/lru-cache/6.0.0
+    dev: true
+
+  registry.nlark.com/shvl/2.0.3:
+    resolution: {integrity: sha1-60vTdkT1aEu6H8UsMBDJb7Xmr9E=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/shvl/download/shvl-2.0.3.tgz}
+    name: shvl
+    version: 2.0.3
     dev: true
 
   registry.nlark.com/source-map/0.6.1:
@@ -946,6 +956,38 @@ packages:
     name: picocolors
     version: 1.0.0
 
+  registry.npmmirror.com/pinia-plugin-persistedstate/1.0.3_pinia@2.0.9:
+    resolution: {integrity: sha512-f+mE3VpnrKcYUZ6zNTpICsZ+tPo/wxXS6i6ECJKV9fx2Ei5hEMrC6dxUrAWK9hKR4Y/MTt3XAWAHiM3lJtP3Jw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pinia-plugin-persistedstate/download/pinia-plugin-persistedstate-1.0.3.tgz}
+    id: registry.npmmirror.com/pinia-plugin-persistedstate/1.0.3
+    name: pinia-plugin-persistedstate
+    version: 1.0.3
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: registry.npmmirror.com/pinia/2.0.9_vue@3.2.26
+      shvl: registry.nlark.com/shvl/2.0.3
+    dev: true
+
+  registry.npmmirror.com/pinia/2.0.9_vue@3.2.26:
+    resolution: {integrity: sha512-iuYdxLJKQ07YPyOHYH05wNG9eKWqkP/4y4GE8+RqEYtz5fwHgPA5kr6zQbg/DoEJGnR2XCm1w1vdt6ppzL9ATg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pinia/download/pinia-2.0.9.tgz}
+    id: registry.npmmirror.com/pinia/2.0.9
+    name: pinia
+    version: 2.0.9
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      typescript: '>=4.4.4'
+      vue: ^2.6.14 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@vue/devtools-api': registry.npmmirror.com/@vue/devtools-api/6.0.0-beta.21.1
+      vue: registry.npmmirror.com/vue/3.2.26
+      vue-demi: registry.npmmirror.com/vue-demi/0.12.1_vue@3.2.26
+    dev: false
+
   registry.npmmirror.com/postcss/8.4.5:
     resolution: {integrity: sha512-jBDboWM8qpaqwkMwItqTQTiFikhs/67OYVvblFFTM7MrZjt6yMKd6r2kgXizEbTTljacm4NldIlZnhbjr84QYg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss/download/postcss-8.4.5.tgz}
     name: postcss
@@ -1104,6 +1146,24 @@ packages:
     optionalDependencies:
       fsevents: registry.npmmirror.com/fsevents/2.3.2
     dev: true
+
+  registry.npmmirror.com/vue-demi/0.12.1_vue@3.2.26:
+    resolution: {integrity: sha1-9+GO++z/0RqwadFHLXoG4xm0F0w=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/download/vue-demi-0.12.1.tgz}
+    id: registry.npmmirror.com/vue-demi/0.12.1
+    name: vue-demi
+    version: 0.12.1
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.26
+    dev: false
 
   registry.npmmirror.com/vue-router/4.0.12_vue@3.2.26:
     resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/download/vue-router-4.0.12.tgz}
