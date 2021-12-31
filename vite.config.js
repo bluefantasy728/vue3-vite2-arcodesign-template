@@ -12,6 +12,13 @@ export default defineConfig({
       scss: {
         charset: false,
       },
+      less: {
+        modifyVars: {
+          // 'arcoblue-6': '#f85959',
+          // 'red-6': '#ab4a4a',
+        },
+        javascriptEnabled: true,
+      },
     },
   },
   plugins: [

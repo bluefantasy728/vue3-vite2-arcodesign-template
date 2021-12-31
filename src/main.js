@@ -9,7 +9,7 @@ import axios from './request';
 import mixin from './mixin';
 import mitt from 'mitt';
 import './scss/global.scss';
-import '@arco-design/web-vue/dist/arco.css';
+import '@arco-design/web-vue/dist/arco.less';
 
 const app = createApp(App);
 mixin(app);
