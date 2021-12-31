@@ -1,5 +1,3 @@
-<style lang="scss" scoped>
-</style>
 <template>
   <div></div>
 </template>
@@ -25,3 +23,5 @@ const {} = toRefs(state);
 <script>
 export default {};
 </script>
+<style lang="scss" scoped>
+</style>

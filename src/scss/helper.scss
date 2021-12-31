@@ -17,6 +17,12 @@
 .alignr {
   text-align: right;
 }
+.alignm {
+  vertical-align: middle;
+}
+.iblock {
+  display: inline-block !important;
+}
 
 .center {
   position: absolute;
@@ -47,31 +53,43 @@
 
 .flex {
   display: flex;
-  &.flex-column {
+  &.column,
+  &.col {
     flex-direction: column;
-  }
-  &.justify-center {
-    justify-content: center;
   }
   &.between {
     justify-content: space-between;
   }
+  &.end {
+    justify-content: flex-end;
+  }
+  &.vtop {
+    align-items: flex-start;
+  }
+  &.vbottom {
+    align-items: flex-end;
+  }
   &.vcenter {
     align-items: center;
   }
+  &.hcenter {
+    justify-content: center;
+  }
+  &.around {
+    justify-content: space-around;
+  }
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
 }
-.no-shrink {
+.shrink0 {
   flex-shrink: 0;
 }
 .flex1 {
   flex: 1;
-}
-
-.bg-blue {
-  background: #f7faff;
-}
-.bg-grey {
-  background: #f8f8f8;
 }
 
 .w100 {
@@ -84,13 +102,19 @@
   width: 300px !important;
 }
 
-.font12 {
-  font-size: 12px;
+.bold {
+  font-weight: bold;
 }
 .bolder {
   font-weight: bolder;
 }
-
+@for $i from 0 through 30 {
+  // max 60
+  $v: 2;
+  .font#{12 + $v * $i} {
+    font-size: #{12 + $v * $i}px !important;
+  }
+}
 @for $i from 0 through 20 {
   $v: 5;
 
@@ -143,12 +167,6 @@
   }
 }
 
-.flow {
-  min-width: 700px !important;
-}
-.cursor-per {
+.c-pointer {
   cursor: pointer;
-}
-.text-danger {
-  color: #e30c0c !important;
 }

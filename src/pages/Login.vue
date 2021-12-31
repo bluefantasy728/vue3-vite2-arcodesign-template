@@ -1,4 +1,59 @@
-<style lang="scss" scoped>
+<template>
+  <div class="page">
+    <div class="page-left posr">
+      <img class="posa" src="@/assets/icons/logo.svg" alt />
+    </div>
+    <div class="page-middle posr">
+      <div class="title posa">工单管理系统</div>
+    </div>
+    <div class="page-right posr">
+      <div class="login-box posa">
+        <h5 class="login-title">用户登录</h5>
+        <p class="mb5" style="color:#4737FF">手机号码</p>
+        <a-input
+          v-model="postData.loginName"
+          type="text"
+          autofocus
+          placeholder="登录名"
+          class="email-input mb20"
+        />
+        <p class="mb5" style="color:#4737FF">登录密码</p>
+        <a-input
+          v-model="postData.password"
+          type="password"
+          placeholder="密码"
+          class="password-input mb100"
+          @keyup.enter.native="loginFn"
+        />
+        <a-button class="mb20" type="primary" style="width:100%" @click="loginFn">登录</a-button>
+        <p class="pointer" style="text-align:right;color:#0404f4" @click="$refs.dialog.open()">忘记密码</p>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup>
+// import { getCurrentInstance, reactive, toRefs } from 'vue';
+// import { useRouter, useRoute } from 'vue-router';
+import { useUserStore } from '@/store/user';
+const { proxy } = getCurrentInstance();
+const router = useRouter();
+const user = useUserStore();
+
+const postData = reactive({
+  loginName: '',
+  password: '',
+});
+
+async function loginFn() {
+  console.log(postData);
+  await user.setUserInfo(postData);
+  router.push({
+    name: 'home',
+  });
+}
+
+// const { postData } = toRefs(postData);
+</script><style lang="scss" scoped>
 .page {
   width: 100vw;
   height: 100%;
@@ -118,58 +173,3 @@
   }
 }
 </style>
-<template>
-  <div class="page">
-    <div class="page-left posr">
-      <img class="posa" src="@/assets/icons/logo.svg" alt />
-    </div>
-    <div class="page-middle posr">
-      <div class="title posa">工单管理系统</div>
-    </div>
-    <div class="page-right posr">
-      <div class="login-box posa">
-        <h5 class="login-title">用户登录</h5>
-        <p class="mb5" style="color:#4737FF">手机号码</p>
-        <a-input
-          v-model="postData.loginName"
-          type="text"
-          autofocus
-          placeholder="登录名"
-          class="email-input mb20"
-        />
-        <p class="mb5" style="color:#4737FF">登录密码</p>
-        <a-input
-          v-model="postData.password"
-          type="password"
-          placeholder="密码"
-          class="password-input mb100"
-          @keyup.enter.native="loginFn"
-        />
-        <a-button class="mb20" type="primary" style="width:100%" @click="loginFn">登录</a-button>
-        <p class="pointer" style="text-align:right;color:#0404f4" @click="$refs.dialog.open()">忘记密码</p>
-      </div>
-    </div>
-  </div>
-</template>
-<script setup>
-// import { getCurrentInstance, reactive, toRefs } from 'vue';
-// import { useRouter, useRoute } from 'vue-router';
-import { useUserStore } from '@/store/user';
-const { proxy } = getCurrentInstance();
-const router = useRouter();
-const user = useUserStore();
-
-const postData = reactive({
-  loginName: '',
-  password: '',
-});
-
-async function loginFn() {
-  await user.setUserInfo(postData);
-  router.push({
-    name: 'home',
-  });
-}
-
-// const { postData } = toRefs(postData);
-</script>

@@ -1,55 +1,3 @@
-<style lang="scss" scoped>
-.layout-aside {
-  height: 100%;
-  .left {
-    width: 58px;
-    height: 100%;
-    flex-direction: column;
-  }
-  .yellow-line {
-    height: 100%;
-    width: 2px;
-    background: #fcec0c;
-  }
-  .side-menu-logo {
-    height: calc(100% - 58px);
-    background: #fff;
-    .brand-logo {
-      width: 58px;
-      height: 58px;
-      background: #0404f4;
-      color: #fff;
-      margin-bottom: 8px;
-    }
-    .menu-item {
-      height: 43px;
-      background: #fff;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: 0.2s all;
-      &.active {
-        border-left: 5px solid #0404f4;
-        background: #fcec0c;
-        i {
-          margin-left: -10px;
-        }
-      }
-    }
-  }
-  .star-logo {
-    width: 58px;
-    height: 58px;
-    line-height: 58px;
-    text-align: center;
-    background: #fff;
-    padding-left: 10px;
-  }
-}
-</style>
-
 <template>
   <div class="layout-aside clearfix">
     <div class="left fl">
@@ -119,3 +67,54 @@ function getSrc(name) {
   return modules[path].default;
 }
 </script>
+<style lang="scss" scoped>
+.layout-aside {
+  height: 100%;
+  .left {
+    width: 58px;
+    height: 100%;
+    flex-direction: column;
+  }
+  .yellow-line {
+    height: 100%;
+    width: 2px;
+    background: #fcec0c;
+  }
+  .side-menu-logo {
+    height: calc(100% - 58px);
+    background: #fff;
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      background: #0404f4;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .menu-item {
+      height: 43px;
+      background: #fff;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.2s all;
+      &.active {
+        border-left: 5px solid #0404f4;
+        background: #fcec0c;
+        i {
+          margin-left: -10px;
+        }
+      }
+    }
+  }
+  .star-logo {
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    background: #fff;
+    padding-left: 10px;
+  }
+}
+</style>

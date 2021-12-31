@@ -1,20 +1,3 @@
-<style lang="scss" scoped>
-.page-dashboard {
-  width: 100%;
-  height: 100%;
-  background: #f8f8f8;
-  padding: 20px 20px 30px 20px;
-  box-sizing: border-box;
-  .bg-img {
-    width: 300px;
-    height: 250px;
-    background: url(@/assets/img/illustration.png);
-  }
-  .test-btn {
-    width: 400px;
-  }
-}
-</style>
 <template>
   <div class="page-dashboard">
     <h3>hello vue3</h3>
@@ -23,6 +6,11 @@
     <img src="@/assets/img/illustration.png" />
     <div class="bg-img"></div>
     <a-button class="test-btn" type="primary" @click="test">测试按钮</a-button>
+    <p class="font12">test font12</p>
+    <p class="font20">test font20</p>
+    <p class="font60">test font60</p>
+    <p class="font40 bold">test font40 bold</p>
+    <p class="font40 bolder">test font40 bolder</p>
   </div>
 </template>
 
@@ -54,3 +42,20 @@ const {} = toRefs(state);
 <script>
 export default {};
 </script>
+<style lang="scss" scoped>
+.page-dashboard {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  padding: 20px 20px 30px 20px;
+  box-sizing: border-box;
+  .bg-img {
+    width: 300px;
+    height: 250px;
+    background: url(@/assets/img/illustration.png);
+  }
+  .test-btn {
+    width: 400px;
+  }
+}
+</style>

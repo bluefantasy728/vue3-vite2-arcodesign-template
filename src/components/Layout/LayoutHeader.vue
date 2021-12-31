@@ -1,21 +1,3 @@
-<style lang="scss" scoped>
-.layout-header {
-  height: 100%;
-  padding: 0 20px;
-  .el-icon-search {
-    color: #4737ff;
-    font-size: 18px;
-    font-weight: bolder;
-  }
-  .avatar {
-    cursor: pointer;
-    .error-icon {
-      font-size: 18px;
-    }
-  }
-}
-</style>
-
 <template>
   <div class="layout-header flex vcenter between">
     <div class="flex vcenter">{{unitName}}</div>
@@ -27,8 +9,8 @@
   </div>
 </template>
 <script setup>
-import { reactive, toRefs } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
+// import { reactive, toRefs } from 'vue';
+// import { useRouter, useRoute } from 'vue-router';
 const router = useRouter();
 const state = reactive({
   unitName: '施工单位名称',
@@ -44,3 +26,9 @@ function logout() {
 }
 const { unitName, userInfo } = toRefs(state);
 </script>
+<style lang="scss" scoped>
+.layout-header {
+  height: 100%;
+  padding: 0 20px;
+}
+</style>

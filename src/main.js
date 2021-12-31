@@ -2,10 +2,8 @@ import { createApp } from 'vue';
 import ArcoVue from '@arco-design/web-vue';
 import App from './App.vue';
 import router from './router';
-import { createPinia } from 'pinia';
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate';
 import storage from 'store';
-import plugin from './plugins';
+import piniaPlugin from './plugins/pinia';
 import config from './config';
 import axios from './request';
 import mixin from './mixin';
@@ -37,7 +35,5 @@ app.config.globalProperties = {
 app.use(ArcoVue, {
   componentPrefix: 'a',
 });
-const pinia = createPinia();
-pinia.use(piniaPluginPersistedstate);
-app.use(pinia);
-app.use(router).use(plugin).mount('#app');
+
+app.use(router).use(piniaPlugin).mount('#app');
