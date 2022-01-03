@@ -11,6 +11,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         charset: false,
+        additionalData: `@import "@/scss/var.scss";`,
       },
       less: {
         modifyVars: {
